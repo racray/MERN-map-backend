@@ -11,6 +11,8 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT;
+
 mongoose 
  .connect("mongodb+srv://Rayed:welcome123@cluster0.ufzzg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
         useNewUrlParser: true,
@@ -22,6 +24,6 @@ mongoose
 app.use("/api/users", userRoute);
 app.use("/api/pins", pinRoute);
 
-app.listen(8800, () => {
+app.listen(PORT, () => {
   console.log("Backend server is running!");
 });
