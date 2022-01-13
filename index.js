@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose 
- .connect(process.env.MONGO_URL, {
+ .connect("mongodb+srv://Rayed:welcome123@cluster0.ufzzg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
            })   
